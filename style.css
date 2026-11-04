@@ -33,3 +33,12 @@
 .home-author h2{font-size:56px;line-height:1.02}
 @media(min-width:761px) and (max-width:1350px){.home-author{margin:0 25px 48px}}
 @media(max-width:760px){.home-author{margin:0 12px 30px;grid-template-columns:minmax(0,1fr)}.home-author .bird-panel{min-height:0;padding:32px;height:auto;aspect-ratio:auto}.home-author .bird-panel img{max-height:300px;max-width:85%;width:auto}.home-author .text{padding:36px 9% 42px}.home-author h2{font-size:48px}}
+
+.author-introduction{max-width:1280px;margin:0 auto;padding:76px 6% 90px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:9%;border-top:1px solid var(--line);background:var(--paper)}
+.author-introduction-title .tag{color:#7b704b;margin-bottom:30px}
+.author-introduction h2{font-size:clamp(46px,5.3vw,76px);line-height:1.04;letter-spacing:-1.5px;margin:0;overflow-wrap:break-word}
+.author-introduction-copy{align-self:center;min-width:0;max-width:440px}
+.author-introduction-copy .intro-lead{font:30px/1.2 'Cormorant Garamond',Georgia,serif;margin-bottom:22px}
+.author-introduction-copy p{line-height:1.9;color:#405347}
+.author-introduction-copy .under{margin-top:12px}
+@media(max-width:760px){.author-introduction{margin:0 7%;padding:44px 0 56px;grid-template-columns:1fr;gap:30px}.author-introduction h2{font-size:clamp(43px,10vw,62px);letter-spacing:-1px}.author-introduction-title .tag{margin-bottom:20px}.author-introduction-copy .intro-lead{font-size:28px}}
