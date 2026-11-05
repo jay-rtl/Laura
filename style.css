@@ -75,3 +75,29 @@
 .scroll-reveal.is-visible{opacity:1;transform:none}
 @media(max-width:760px){.home-hero{min-height:700px}.home-hero:before{background:linear-gradient(90deg,#051e17bb,#051e1755),url('/Laura/assets/forest-dawn.webp') 57% center/cover no-repeat}.home-content{padding-top:60px}.home-content h1{font-size:clamp(78px,20vw,108px)}.featured-novel{padding:60px 8%;grid-template-columns:1fr;gap:40px}.novel-cover-stage{padding:28px 22px}.novel-cover-stage a{width:65%;max-width:220px}.novel-copy h2{font-size:49px}.story-path{grid-template-columns:1fr;padding:50px 8%;gap:30px;margin-bottom:50px}.path-heading h2{font-size:44px}.path-details summary{font-size:25px}.path-details details p{padding-left:30px}}
 @media(prefers-reduced-motion:reduce){.scroll-reveal{opacity:1;transform:none;transition:none}.novel-cover-stage img,.novel-cover-stage a:hover img{transform:none;transition:none}}
+
+/* Author identity and coordinated motion */
+header{background:#102e25;color:#f4f0e7;margin:0;padding:15px 5%;height:auto;min-height:120px;border-bottom:1px solid #c8b37c33;gap:24px}
+.brand{display:flex;align-items:center;gap:18px;flex-shrink:0;font-size:25px}
+.brand-logo{display:block;width:94px;height:94px;object-fit:contain}
+.brand-label small{color:#c9cdbb;letter-spacing:2.5px;font-size:8px}
+header nav{gap:27px;font-size:15px;line-height:1.5;flex-wrap:wrap;justify-content:flex-end}
+header nav a{position:relative;padding:8px 0;white-space:nowrap}
+header nav .buy{padding:12px 18px;border-color:#bdcaad66}
+header nav a[aria-current]{border-color:#dfc892;padding-bottom:8px;color:#e8ce93}
+header nav a:hover{color:#e8ce93}
+.footer-logo{width:120px;height:120px;object-fit:contain;display:block;margin-bottom:20px}
+main.fade{animation:none}
+.scroll-reveal{opacity:1;transform:none}
+.entrance{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;background:#091b16;color:#e8ce93;overflow:hidden}
+.entrance-inner{text-align:center;position:relative}
+.entrance-logo{display:block;width:min(310px,66vw);height:auto;margin:auto;will-change:transform,opacity}
+.entrance-rule{width:110px;height:1px;background:#bda46b;margin:25px auto 18px;transform-origin:center}
+.entrance-caption{font:10px/1.5 'DM Sans',Arial;letter-spacing:4px;text-transform:uppercase}
+.entrance-skip{position:absolute;right:28px;bottom:26px;border:1px solid #c9c9b94d;color:#e8e5d3;background:transparent;padding:10px 16px;font:11px 'DM Sans',Arial;cursor:pointer}
+.entrance-skip:hover{border-color:#e8ce93}
+body.intro-running{overflow:hidden}
+@media(max-width:1000px){header{padding:15px 4%;gap:15px}.brand{font-size:21px;gap:12px}.brand-logo{width:78px;height:78px}header nav{gap:18px;font-size:14px}}
+@media(max-width:760px){header{display:flex;flex-direction:column;align-items:stretch;padding:12px 6% 14px;min-height:0;gap:7px}.brand{align-self:flex-start;font-size:22px}.brand-logo{width:72px;height:72px}.brand-label small{font-size:7px;letter-spacing:2px}header nav{width:100%;display:flex;justify-content:space-between;gap:6px;font-size:14px;padding:0}header nav a{padding:8px 0}header nav .buy{display:none}.footer-logo{width:100px;height:100px}}
+@media(max-width:360px){header nav{font-size:12px}.brand{font-size:20px}}
+@media(prefers-reduced-motion:reduce){.entrance{display:none}.novel-cover-stage img{transition:none}body.intro-running{overflow:auto}}
