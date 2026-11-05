@@ -5,9 +5,9 @@ const finish=()=>{if(finished)return;finished=true;clearTimeout(guard);if(intro)
 let first=true;try{first=!sessionStorage.getItem('laura-entrance-seen');sessionStorage.setItem('laura-entrance-seen','1');}catch(e){}
 if(first&&!reduce&&window.gsap){
  intro=document.createElement('div');intro.className='entrance';intro.setAttribute('role','dialog');intro.setAttribute('aria-label','Laura Mountainspring introduction');
- intro.innerHTML='<div class="entrance-inner"><img class="entrance-logo" src="/Laura/assets/laura-logo.png" alt="Laura Mountainspring — Independent Author" width="394" height="394"><div class="entrance-rule"></div><p class="entrance-caption">Stories to wander into</p></div><button class="entrance-skip" type="button">Skip intro →</button>';
+ intro.innerHTML='<div class="entrance-inner"><img class="entrance-logo" src="/Laura/assets/laura-logo.png" alt="Laura Mountainspring — Independent Author" width="394" height="394"><div class="entrance-rule"></div><p class="entrance-caption">Stories to wander into</p></div>';
  document.body.append(intro);document.body.classList.add('intro-running');
- intro.querySelector('button').addEventListener('click',finish);const esc=e=>{if(e.key==='Escape'){finish();document.removeEventListener('keydown',esc)}};document.addEventListener('keydown',esc);
+ const esc=e=>{if(e.key==='Escape'){finish();document.removeEventListener('keydown',esc)}};document.addEventListener('keydown',esc);
  guard=setTimeout(finish,3500);
  gsap.timeline({onComplete:finish}).fromTo('.entrance-logo',{autoAlpha:0,scale:.88,y:18},{autoAlpha:1,scale:1,y:0,duration:.9,ease:'power3.out'}).from('.entrance-rule',{scaleX:0,duration:.55},.45).from('.entrance-caption',{opacity:0,y:9,duration:.5},.65).to(intro,{opacity:0,yPercent:-5,duration:.55,ease:'power2.inOut'},1.7);
 }
