@@ -101,3 +101,7 @@ body.intro-running{overflow:hidden}
 @media(max-width:760px){header{display:flex;flex-direction:column;align-items:stretch;padding:12px 6% 14px;min-height:0;gap:7px}.brand{align-self:flex-start;font-size:22px}.brand-logo{width:72px;height:72px}.brand-label small{font-size:7px;letter-spacing:2px}header nav{width:100%;display:flex;justify-content:space-between;gap:6px;font-size:14px;padding:0}header nav a{padding:8px 0}header nav .buy{display:none}.footer-logo{width:100px;height:100px}}
 @media(max-width:360px){header nav{font-size:12px}.brand{font-size:20px}}
 @media(prefers-reduced-motion:reduce){.entrance{display:none}.novel-cover-stage img{transition:none}body.intro-running{overflow:auto}}
+
+/* Keep navigation available while reading. */
+header{position:sticky;top:0;z-index:1000;box-shadow:0 4px 18px #091b1614}
+@media(min-width:761px){.book-plinth{top:150px}}
