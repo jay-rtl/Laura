@@ -105,3 +105,10 @@ body.intro-running{overflow:hidden}
 /* Keep navigation available while reading. */
 header{position:sticky;top:0;z-index:1000;box-shadow:0 4px 18px #091b1614}
 @media(min-width:761px){.book-plinth{top:150px}}
+
+/* Author portrait and social footer link. */
+.author-portrait{margin:0;align-self:start;max-width:440px;width:100%;justify-self:center}
+.author-portrait img{display:block;width:100%;height:auto;border:1px solid var(--line)}
+.author-portrait figcaption{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;margin-top:16px;color:#63715e}
+.footer-links{flex-wrap:wrap;align-content:flex-start}
+@media(max-width:760px){.author-portrait{max-width:360px;margin-top:15px}}
