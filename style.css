@@ -112,3 +112,9 @@ header{position:sticky;top:0;z-index:1000;box-shadow:0 4px 18px #091b1614}
 .author-portrait figcaption{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;margin-top:16px;color:#63715e}
 .footer-links{flex-wrap:wrap;align-content:flex-start}
 @media(max-width:760px){.author-portrait{max-width:360px;margin-top:15px}}
+
+/* Edge-to-edge home hero, flush with the sticky header. */
+.home-hero{margin:0;width:100%;min-height:max(650px,calc(100svh - 125px))}
+.home-content{padding-left:8%;padding-right:6%}
+.hero-foot{left:8%;right:5%}
+@media(max-width:760px){.home-hero{margin:0;min-height:max(620px,calc(100svh - 144px))}.home-content{padding:50px 7% 90px}.hero-foot{left:7%;right:7%}}
