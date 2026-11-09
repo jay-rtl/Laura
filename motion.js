@@ -1,15 +1,5 @@
 (()=>{'use strict';
 
-const header=document.querySelector('header'),toggle=document.querySelector('.nav-toggle'),nav=document.querySelector('#main-navigation'),mobile=matchMedia('(max-width:760px)');
-if(header&&toggle&&nav){
- const setMenu=open=>{header.classList.toggle('menu-open',open);toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close menu':'Open menu');nav.inert=mobile.matches&&!open;};
- header.classList.add('nav-ready');setMenu(false);
- toggle.addEventListener('click',()=>setMenu(toggle.getAttribute('aria-expanded')!=='true'));
- nav.addEventListener('click',e=>{if(e.target.closest('a'))setMenu(false)});
- document.addEventListener('keydown',e=>{if(e.key==='Escape'&&header.classList.contains('menu-open')){setMenu(false);toggle.focus()}});
- document.addEventListener('click',e=>{if(!header.contains(e.target))setMenu(false)});
- mobile.addEventListener('change',()=>setMenu(false));
-}
 
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 let intro=null,finished=false,guard;
