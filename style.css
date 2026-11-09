@@ -118,3 +118,26 @@ header{position:sticky;top:0;z-index:1000;box-shadow:0 4px 18px #091b1614}
 .home-content{padding-left:8%;padding-right:6%}
 .hero-foot{left:8%;right:5%}
 @media(max-width:760px){.home-hero{margin:0;min-height:max(620px,calc(100svh - 144px))}.home-content{padding:50px 7% 90px}.hero-foot{left:7%;right:7%}}
+
+/* Compact mobile navigation with a transparent two-line control. */
+.nav-toggle{display:none}
+@media(max-width:760px){
+ header.nav-ready{flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:10px;padding:12px 6%;min-height:81px}
+ header.nav-ready .brand{align-self:auto;min-width:0;gap:10px;font-size:18px}
+ header.nav-ready .brand-logo{width:56px;height:56px}
+ header.nav-ready .brand-label small{font-size:6px;letter-spacing:1.5px;margin-top:8px}
+ .nav-ready .nav-toggle{display:flex;position:relative;flex:0 0 44px;width:44px;height:44px;align-items:center;justify-content:center;padding:0;border:0;background:none;box-shadow:none;color:#f4f0e7;cursor:pointer;-webkit-tap-highlight-color:transparent}
+ .nav-toggle span{position:absolute;width:25px;height:1.5px;background:currentColor;transition:transform .3s ease}
+ .nav-toggle span:first-child{transform:translateY(-4px)}
+ .nav-toggle span:last-child{transform:translateY(4px)}
+ .menu-open .nav-toggle span:first-child{transform:rotate(45deg)}
+ .menu-open .nav-toggle span:last-child{transform:rotate(-45deg)}
+ header.nav-ready nav{position:absolute;top:100%;left:0;right:0;width:100%;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;padding:18px 7% 26px;background:#102e25;border-top:1px solid #c8b37c33;box-shadow:0 14px 24px #091b1630;max-height:calc(100svh - 81px);overflow-y:auto;opacity:0;visibility:hidden;transform:translateY(-8px);pointer-events:none;transition:opacity .25s ease,transform .25s ease,visibility .25s}
+ header.nav-ready.menu-open nav{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+ header.nav-ready nav a{font-size:21px;line-height:1.4;padding:14px 0;border-bottom:1px solid #c8b37c22}
+ header.nav-ready nav a[aria-current]{padding-bottom:14px}
+ header.nav-ready nav .buy{display:block;border:0;margin-top:8px;color:#e8ce93;padding:14px 0}
+ .home-hero{min-height:max(620px,calc(100svh - 81px))}
+}
+@media(max-width:360px){header.nav-ready{padding-left:4%;padding-right:4%}header.nav-ready .brand{font-size:16px;gap:7px}header.nav-ready .brand-logo{width:48px;height:48px}}
+@media(prefers-reduced-motion:reduce){.nav-toggle span,header.nav-ready nav{transition:none}}
